@@ -3,7 +3,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from locators import BUTTON_LOGIN, BUTTON_PERSONAL_ACCOUNT, INPUT_LOGIN_EMAIL, INPUT_LOGIN_PASSWORD, LINK_FORGOT_PASSWORD, LINK_RECOVER_TO_LOGIN, TEXT_CONSTRUCTOR_PAGE, TEXT_RECOVER_HEADER
 from data import VALID_EMAIL, VALID_PASSWORD
 
-def test_login_via_password_recovery_form(driver):
+class TestPasswordRecovery:
+ def test_login_via_password_recovery_form(self,driver):
     driver.find_element(*BUTTON_PERSONAL_ACCOUNT).click()
     driver.find_element(*LINK_FORGOT_PASSWORD).click()
 

@@ -6,17 +6,17 @@ BUTTON_PERSONAL_ACCOUNT = (By.XPATH, "//p[text()='Личный Кабинет']"
 BUTTON_LOGOUT = (By.XPATH, "//button[text()='Выход']")
 TEXT_CONSTRUCTOR_PAGE = (By.XPATH, "//button[text()='Оформить заказ']")
 
-TAB_BUNS = (By.XPATH, '//*[@id="root"]/div/main/section[1]/div[1]/div[1]')
+TAB_BUNS = (By.XPATH, "//span[text()='Булки']/parent::div")
 TEXT_BUNS = (By.XPATH, "//h2[text()='Булки']")
-TAB_SAUCES = (By.XPATH, '//*[@id="root"]/div/main/section[1]/div[1]/div[2]')
+TAB_SAUCES = (By.XPATH, "//span[text()='Соусы']/parent::div")
 TEXT_SAUCES = (By.XPATH, "//h2[text()='Соусы']")
-TAB_FILLINGS = (By.XPATH, '//*[@id="root"]/div/main/section[1]/div[1]/div[3]')
+TAB_FILLINGS = (By.XPATH, "//span[text()='Начинки']/parent::div")
 TEXT_FILLINGS = (By.XPATH, "//h2[text()='Начинки']")
 
 # --- Страница регистрации ---
-INPUT_NAME = (By.XPATH, ".//fieldset[1]//input")
-INPUT_EMAIL = (By.XPATH, ".//fieldset[2]//input")
-INPUT_PASSWORD = (By.XPATH, ".//fieldset[3]//input")
+INPUT_NAME = (By.XPATH, "//label[text()='Имя']/following-sibling::input")
+INPUT_EMAIL = (By.XPATH, "//label[text()='Email']/following-sibling::input")
+INPUT_PASSWORD = (By.XPATH, "//input[@type='password' and @name='Пароль']")
 BUTTON_REGISTER = (By.XPATH, "//button[text()='Зарегистрироваться']")
 LINK_REGISTER_TO_LOGIN = (By.XPATH, "//a[text()='Войти']")
 TEXT_REGISTRATION_ERROR = (By.XPATH, "//p[text()='Некорректный пароль']")
@@ -35,7 +35,7 @@ TEXT_RECOVER_HEADER = (By.XPATH, "//h2[text()='Восстановление па
 LINK_RECOVER_TO_LOGIN = (By.XPATH, "//a[text()='Войти']")
 
 # --- переход по логотипу ---
-LOGO_STELLAR = (By.XPATH, "//header//nav//div/a")
+LOGO_STELLAR = (By.XPATH, "//div[contains(@class,'AppHeader_header__logo')]/a")
 
 # --- Личный кабинет ---
-BLOCK_PERSONAL_ACCOUNT = (By.XPATH, "//a[@href='/account/profile' and contains(@class,'Account_link_active')]")
+BLOCK_PERSONAL_ACCOUNT = (By.XPATH, "//a[contains(@class,'Account_link_active')]")

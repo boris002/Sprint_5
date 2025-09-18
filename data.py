@@ -9,8 +9,11 @@ VALID_PASSWORD = "pass123"
 
 # Данные для регистрации
 REG_NAME = "Тестовый Пользователь"
-REG_EMAIL = generate_email()
-REG_PASSWORD = generate_password()
+def get_reg_email():
+    return generate_email()
+
+def get_reg_password():
+    return generate_password()
 
 # Невалидные данные
 INVALID_PASSWORD = "qwer"

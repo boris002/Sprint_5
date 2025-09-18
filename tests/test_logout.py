@@ -2,8 +2,9 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from locators import TEXT_CONSTRUCTOR_PAGE,BLOCK_LOGIN_FORM, BUTTON_LOGIN, BUTTON_LOGOUT, BUTTON_PERSONAL_ACCOUNT, INPUT_LOGIN_EMAIL, INPUT_LOGIN_PASSWORD
 from data import VALID_EMAIL, VALID_PASSWORD
+class TestLogout:
 
-def test_logout(driver):
+ def test_logout(self,  driver):
     driver.find_element(*BUTTON_PERSONAL_ACCOUNT).click()
 
     # Ждём появления формы логина
